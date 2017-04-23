@@ -1,9 +1,13 @@
 from selenium import webdriver
 import os
 import urllib2
+#import Dimension
 url = "http://itsthisforthat.com/api.php?text"
 
 driver = webdriver.Chrome()
+#driver.Manage().Window.Size = new Size(730, 850);
+#driver.set_window_size(730,1000)
+#driver.manage().window().setSize(new Dimension(850,730));
 def new_idea():
     req = urllib2.Request(url, headers={'User-Agent' : "Magic Browser"})
     con = urllib2.urlopen( req )
